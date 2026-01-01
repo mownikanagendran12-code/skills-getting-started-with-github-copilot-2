@@ -158,13 +158,28 @@ section h3 {
 
 /* small subtle bullet style if you prefer bullets */
 .participants li::before {
-  content: "";
-  width: 6px;
-  height: 6px;
-  background: #cfe4ff;
-  border-radius: 50%;
-  margin-right: 6px;
-  flex-shrink: 0;
+  content: none;
+}
+
+/* Remove (unregister) button styling */
+.participant-remove {
+  margin-left: auto;
+  background: transparent;
+  border: none;
+  color: #c62828;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.participant-remove:hover {
+  background-color: rgba(198,40,40,0.08);
+}
+.participant-remove svg {
+  display: block;
+  color: inherit;
 }
 
 /* Responsive tweaks */
