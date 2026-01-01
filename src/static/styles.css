@@ -74,6 +74,111 @@ section h3 {
   margin-bottom: 8px;
 }
 
+/* Participants section inside activity cards */
+.participants {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px dashed #eee;
+  display: block;
+}
+
+.participants-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.participants-header h5 {
+  font-size: 14px;
+  color: #444;
+  margin: 0;
+  font-weight: 600;
+}
+
+.participants-count {
+  margin-left: auto;
+  background-color: #e8f0ff;
+  color: #1a237e;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px solid #d0d9ff;
+}
+
+/* Participants list styling */
+.participants ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 140px;
+  overflow: auto;
+  padding-right: 6px; /* room for scrollbar */
+}
+
+.participants li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(180deg, #ffffff, #fbfbff);
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #f0f2ff;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03);
+  font-size: 14px;
+  color: #333;
+}
+
+/* Simple circular avatar with initials */
+.participant-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6ac1ff, #7b61ff);
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 12px;
+  flex-shrink: 0;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.06);
+}
+
+/* participant name text */
+.participant-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* small subtle bullet style if you prefer bullets */
+.participants li::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: #cfe4ff;
+  border-radius: 50%;
+  margin-right: 6px;
+  flex-shrink: 0;
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+  .participants ul {
+    max-height: 120px;
+  }
+  .participant-avatar {
+    width: 28px;
+    height: 28px;
+    font-size: 11px;
+  }
+}
+
 .form-group {
   margin-bottom: 15px;
 }
